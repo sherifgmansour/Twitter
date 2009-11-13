@@ -35,19 +35,19 @@ use the specific API described in the next sections.
 
 Here is an example where we manually use the Api class to issue requests:
 
-    $api = new Api($client);
+    $api = new \Twitter\Api($client);
     $results = $api->post('statuses/update', array('status' => 'my new status'));
 
 This is the same as doing this:
 
-    $statuses = new Api\Statuses($client);
+    $statuses = new \Twitter\Api\Statuses($client);
     $statuses->updateStatus('my new status');
 
 ### Account
 
 Instantiate an instance:
 
-    $account = new Api\Account($client);
+    $account = new \Twitter\Api\Account($client);
 
 Below are the methods available:
 
@@ -64,7 +64,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $blocks = new Api\Blocks($client);
+    $blocks = new \Twitter\Api\Blocks($client);
 
 Below are the methods available:
 
@@ -78,7 +78,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $dms = new Api\DirectMessages($client);
+    $dms = new \Twitter\Api\DirectMessages($client);
 
 Below are the methods available:
 
@@ -91,7 +91,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $favorites = new Api\Favorites($client);
+    $favorites = new \Twitter\Api\Favorites($client);
 
 Below are the methods available:
 
@@ -103,7 +103,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $friendships = new Api\Friendships($client);
+    $friendships = new \Twitter\Api\Friendships($client);
 
 Below are the methods available:
 
@@ -118,7 +118,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $listMembers = new Api\ListMembers($client);
+    $listMembers = new \Twitter\Api\ListMembers($client);
 
 Below are the methods available:
 
@@ -131,7 +131,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $lists = new Api\Lists($client);
+    $lists = new \Twitter\Api\Lists($client);
 
 Below are the methods available:
 
@@ -148,7 +148,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $listSubscribers = new Api\ListSubscribers($client);
+    $listSubscribers = new \Twitter\Api\ListSubscribers($client);
 
 Below are the methods available:
 
@@ -161,7 +161,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $notifications = new Api\Notifications($client);
+    $notifications = new \Twitter\Api\Notifications($client);
 
 Below are the methods available:
 
@@ -172,7 +172,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $savedSearches = new Api\SavedSearches($client);
+    $savedSearches = new \Twitter\Api\SavedSearches($client);
 
 Below are the methods available:
 
@@ -185,7 +185,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $socialGraph = new Api\SocialGraph($client);
+    $socialGraph = new \Twitter\Api\SocialGraph($client);
 
 Below are the methods available:
 
@@ -196,7 +196,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $statuses = new Api\Statuses($client);
+    $statuses = new \Twitter\Api\Statuses($client);
 
 Below are the methods available:
 
@@ -214,7 +214,7 @@ Below are the methods available:
 
 Instantiate an instance:
 
-    $search = new Api\Search($client);
+    $search = new \Twitter\Api\Search($client);
 
 Below are the methods available:
 
