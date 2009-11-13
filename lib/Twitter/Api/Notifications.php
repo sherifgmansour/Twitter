@@ -4,6 +4,13 @@ namespace Twitter\Api;
 
 use \Twitter\Api;
 
+/**
+ * Notification Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class Notifications extends Api
 {
     public function enable($username)

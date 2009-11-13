@@ -4,6 +4,13 @@ namespace Twitter\Api;
 
 use \Twitter\Api;
 
+/**
+ * List Members Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class ListMembers extends Api
 {
     public function getMembers($id)

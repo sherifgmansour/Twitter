@@ -4,6 +4,13 @@ namespace Twitter\Api;
 
 use \Twitter\Api;
 
+/**
+ * Search Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class Search extends Api
 {
     private $_nextPage;

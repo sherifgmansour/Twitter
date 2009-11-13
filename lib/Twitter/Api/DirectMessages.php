@@ -4,6 +4,13 @@ namespace Twitter\Api;
 
 use \Twitter\Api;
 
+/**
+ * Direct Message Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class DirectMessages extends Api
 {
     public function getMostRecent()

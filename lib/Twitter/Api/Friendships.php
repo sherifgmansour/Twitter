@@ -4,6 +4,13 @@ namespace Twitter\Api;
 
 use \Twitter\Api;
 
+/**
+ * Friendship Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class Friendships extends Api
 {
     public function follow($username)

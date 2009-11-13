@@ -4,6 +4,13 @@ namespace Twitter\Api;
 
 use \Twitter\Api;
 
+/**
+ * Status Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class Statuses extends Api
 {
     private $_nextCursor = '-1';
@@ -17,7 +24,7 @@ class Statuses extends Api
     public function getFriendsTimeline($iteratePages = false)
     {
         if ($iteratePages) {
-            return $this->_getPageNumPaginated('statuses/friends_timeline');
+            return $this->_getPaginatedByPageNum('statuses/friends_timeline');
         } else {
             return $this->get('statuses/friends_timeline');
         }
@@ -26,7 +33,7 @@ class Statuses extends Api
     public function getUserTimeline($iteratePages = false)
     {
         if ($iteratePages) {
-            return $this->_getPageNumPaginated('statuses/user_timeline');
+            return $this->_getPaginatedByPageNum('statuses/user_timeline');
         } else {
             return $this->get('statuses/user_timeline');
         }
@@ -35,7 +42,7 @@ class Statuses extends Api
     public function getMentions($iteratePages = false)
     {
         if ($iteratePages) {
-            return $this->_getPageNumPaginated('statuses/mentions');
+            return $this->_getPaginatedByPageNum('statuses/mentions');
         } else {
             return $this->get('statuses/mentions');
         }
@@ -61,7 +68,7 @@ class Statuses extends Api
     public function getUserFriends($username, $iteratePages = false)
     {
         if ($iteratePages) {
-            return $this->_getCursorPaginated(sprintf('statuses/friends/%s', $username));
+            return $this->_getPaginatedByCursor(sprintf('statuses/friends/%s', $username));
         } else {
             return $this->get(sprintf('statuses/friends/%s', $username));
         }
@@ -70,13 +77,13 @@ class Statuses extends Api
     public function getUserFollowers($username, $iteratePages = false)
     {
         if ($iteratePages) {
-            return $this->_getCursorPaginated(sprintf('statuses/followers/%s', $username));
+            return $this->_getPaginatedByCursor(sprintf('statuses/followers/%s', $username));
         } else {
             return $this->get(sprintf('statuses/followers/%s', $username));
         }
     }
 
-    private function _getPageNumPaginated($path, array $data = array())
+    private function _getPaginatedByPageNum($path, array $data = array())
     {
         if ($this->_nextPage === false) {
             return false;
@@ -95,7 +102,7 @@ class Statuses extends Api
         return $results;
     }
 
-    private function _getCursorPaginated($path, array $data = array())
+    private function _getPaginatedByCursor($path, array $data = array())
     {
         if ($this->_nextCursor === false) {
             return false;

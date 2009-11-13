@@ -2,6 +2,13 @@
 
 namespace Twitter\Client;
 
+/**
+ * OAuth Twitter client
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class OAuth extends AbstractClient
 {
     private $_oAuth;

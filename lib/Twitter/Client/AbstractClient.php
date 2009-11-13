@@ -2,6 +2,13 @@
 
 namespace Twitter\Client;
 
+/**
+ * Abstract Twitter client class
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 abstract class AbstractClient implements Client
 {
     protected $_username;

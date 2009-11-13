@@ -168,6 +168,19 @@ Below are the methods available:
 * $notifications->enable($username)
 * $notifications->disable($username)
 
+### Saved Searches
+
+Instantiate an instance:
+
+    $savedSearches = new Api\SavedSearches($client);
+
+Below are the methods available:
+
+* $savedSearches->getSavedSearches()
+* $savedSearches->getSavedSearch($id)
+* $savedSearches->createSavedSearch($query)
+* $savedSearches->deleteSavedSearch($id)
+
 ### Social Graph
 
 Instantiate an instance:

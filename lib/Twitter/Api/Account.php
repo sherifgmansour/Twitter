@@ -5,6 +5,13 @@ namespace Twitter\Api;
 use \Twitter\Api,
     \Twitter\Client\HTTP;
 
+/**
+ * Account Methods
+ *
+ * @package Twitter
+ * @subpackage Api
+ * @author Jonathan H. Wage <jonwage@gmail.com>
+ */
 class Account extends Api
 {
     public function verify($username = null, $password = null)

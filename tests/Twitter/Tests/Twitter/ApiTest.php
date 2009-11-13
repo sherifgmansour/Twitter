@@ -202,6 +202,31 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         $this->assertLastRequestMethodEquals('post');
     }
 
+    public function testSavedSearches()
+    {
+        $savedSearches = new Api\SavedSearches($this->_client);
+        $savedSearches->getSavedSearches();
+        $this->assertLastRequestUrlEquals('http://api.twitter.com/1/saved_searches.json');
+
+        $savedSearches->getSavedSearch('1');
+        $this->assertLastRequestUrlEquals('http://api.twitter.com/1/saved_searches/show/1.json');
+
+        $savedSearches->createSavedSearch('@jwage');
+        $this->assertLastRequestUrlEquals('http://api.twitter.com/1/saved_searches/create.json');
+        $this->assertLastRequestMethodEquals('post');
+        $this->assertLastRequestDataEquals(array(
+            'query' => '@jwage'
+        ));
+
+        $savedSearches->deleteSavedSearch('1');
+        $this->assertLastRequestUrlEquals('http://api.twitter.com/1/saved_searches/destroy.json');
+        $this->assertLastRequestMethodEquals('delete');
+        $this->assertLastRequestDataEquals(array(
+            'id' => 1,
+            '_method' => 'DELETE'
+        ));
+    }
+
     public function testSocialGraph()
     {
         $socialGraph = new Api\SocialGraph($this->_client);
